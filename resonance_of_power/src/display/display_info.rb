@@ -11,9 +11,9 @@ end
 # Выводит HP бар героя
 def info_hero(hero)
   puts "====================="
-  puts "Имя: #{hero.name}"
-  puts "HP: #{hero.hp}/#{hero.max_hp} #{hp_bar(hero.hp, hero.max_hp)}"
-  puts "Деньги: #{hero.money}"
+  puts "Имя: #{hero[:name]}"
+  puts "HP: #{hero[:hp]}/#{hero[:max_hp]} [#{'█' * (hero[:hp] * 20 / hero[:max_hp])}#{'░' * (20 - (hero[:hp] * 20 / hero[:max_hp]))}]"
+  puts "Деньги: #{hero[:money]}"
   puts "====================="
 end
 

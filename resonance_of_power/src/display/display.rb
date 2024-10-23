@@ -1,15 +1,17 @@
 require_relative 'display_info'
+require_relative '../locations/location_manager'
 
   # Очищает экран
   def clear_screen
     system('clear') || system('cls')
   end
 
-  # Выводит информацию о герое
-  def display(hero)
+  # Интерфейс 
+  def display(hero, location)
     clear_screen
     info_hero(hero)
-    puts "\n" * 10
+    puts "\n" * 2
+    location_info(location)
     puts "-" * 60
     actions_menu
   end
